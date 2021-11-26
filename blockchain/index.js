@@ -23,7 +23,7 @@ lisk_sdk_1.genesisBlockDevnet.header.asset.accounts = lisk_sdk_1.genesisBlockDev
     },
 }));
 const customConfig = {
-    label: "chronostamp",
+    label: "concert",
     genesisConfig: {
         blockTime: 20,
         communityIdentifier: "chronostamp",
