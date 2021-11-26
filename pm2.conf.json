@@ -1,6 +1,8 @@
 {
     "name": "concert",
-    "script": "npm run start",
+    "script": "npm",
+    "args": "start",
+    "exec_interpreter": "node@12.20.2",
     "env": {
       "IPFS_API_PORT":3001,
       "IPFS_API_LIMITER_MAX":3,
@@ -10,6 +12,5 @@
       "MIN_FEE_CHANGE_OWNERSHIP":"25",
       "CHRONOSTAMP_DB_PATH":"~/.lisk/chronostamp/",
       "CHRONOSTAMP_DB_NAME":"chronostamp_plugin.db"
-    },
-    "exec_interpreter": "node@12.20.2"
+    }
   }
