@@ -2,7 +2,7 @@
 
 #apt update
 
-#apt install git wget curl make buil-essential
+#apt install -y git wget curl make build-essential
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
