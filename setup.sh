@@ -19,6 +19,8 @@ pm2 update
 
 pm2 completion install
 
+npm install
+
 pm2 start pm2.conf.json
 
 pm2 save
