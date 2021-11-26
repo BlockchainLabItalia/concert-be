@@ -13,7 +13,7 @@ export NVM_DIR="$HOME/.nvm"
 
 nvm install 12.20.2
 
-npm install pm2 -g
+npm install -g pm2
 
 pm2 update
 
