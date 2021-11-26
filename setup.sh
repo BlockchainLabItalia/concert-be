@@ -11,9 +11,13 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
+source ~/.bashrc
+
 nvm install 12.20.2
 
 npm install -g pm2
+
+source ~/.bashrc
 
 pm2 update
 
@@ -24,3 +28,5 @@ npm install
 pm2 start pm2.conf.json
 
 pm2 save
+
+source ~/.bashrc
