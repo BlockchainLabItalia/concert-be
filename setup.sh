@@ -1,7 +1,7 @@
 #!/bin/bash
-apt update
+sudo apt-get update
 
-apt install -y git wget curl make build-essential
+sudo apt-get install -y git wget curl tar unzip zip ntp make build-essential
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
