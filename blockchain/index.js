@@ -38,7 +38,7 @@ const customConfig = {
     },
     network : {
         port: 5000,
-        fixedPeers: [
+        seedPeers: [
             {
               ip: "94.130.150.215",
               port: 5000
