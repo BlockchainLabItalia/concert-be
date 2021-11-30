@@ -26,7 +26,7 @@ const customConfig = {
     label: "concert",
     genesisConfig: {
         blockTime: 20,
-        communityIdentifier: "chronostamp",
+        communityIdentifier: "concert",
     },
     rpc: {
         enable: true,
@@ -46,9 +46,6 @@ const customConfig = {
                 port: 5000
             }
           ],
-    },
-    forging: {
-        delegates: []
     }
 };
 async function main() {
