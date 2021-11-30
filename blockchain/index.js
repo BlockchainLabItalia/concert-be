@@ -39,15 +39,13 @@ const customConfig = {
     network : {
         port: 5000,
         seedPeers: [
+          ],
+        fixedPeers: [
             {
-              ip: "94.130.150.215",
-              port: 5000
-            },
-            {
-              ip: "78.47.200.110",
-              port: 5000
+                ip: "159.69.159.240",
+                port: 5000
             }
-          ]
+          ],
     },
     forging: {
         delegates: []
