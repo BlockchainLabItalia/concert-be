@@ -41,10 +41,14 @@ const customConfig = {
         seedPeers: [
           ],
         fixedPeers: [
+            {
+				"ip": "159.69.159.240",
+				"port": 5000
+			}
           ]
     },
 };
-lisk_sdk_1.configDevnet.forging.force=true;
+lisk_sdk_1.configDevnet.forging.force=false;
 async function main() {
     const appConfig = lisk_sdk_1.utils.objects.mergeDeep({}, lisk_sdk_1.configDevnet, customConfig);
     const app = lisk_sdk_1.Application.defaultApplication(lisk_sdk_1.genesisBlockDevnet, appConfig);
