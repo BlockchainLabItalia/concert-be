@@ -32,6 +32,7 @@ const customConfig = {
         enable: true,
         mode: "ws",
         port: parseInt(process.env.WS_API_PORT) || 3003,
+	host: "0.0.0.0"
     },
     logger: {
         consoleLogLevel: "info", // debug | info
