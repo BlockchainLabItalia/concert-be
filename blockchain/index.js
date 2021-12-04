@@ -26,7 +26,7 @@ const fixed_peer = {};
 if (!process.env.IS_FORGING_NODE && process.env.FORGING_NODE_IP) {
 	fixed_peer = {
 		ip: process.env.FORGING_NODE_IP,
-		port: process.env.FORGING_NODE_PORT || 5000
+		port: parseInt(process.env.FORGING_NODE_PORT) || 5000
 	}
 }
 const customConfig = {
@@ -53,7 +53,7 @@ const customConfig = {
           ]
     },
 };
-lisk_sdk_1.configDevnet.forging.force=process.env.IS_FORGING_NODE;
+lisk_sdk_1.configDevnet.forging.force=!!process.env.IS_FORGING_NODE;
 async function main() {
     const appConfig = lisk_sdk_1.utils.objects.mergeDeep({}, lisk_sdk_1.configDevnet, customConfig);
     const app = lisk_sdk_1.Application.defaultApplication(lisk_sdk_1.genesisBlockDevnet, appConfig);
