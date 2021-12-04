@@ -22,6 +22,13 @@ lisk_sdk_1.genesisBlockDevnet.header.asset.accounts = lisk_sdk_1.genesisBlockDev
         assets: [],
     },
 }));
+const fixed_peer = {};
+if (!process.env.IS_FORGING_NODE && process.env.FORGING_NODE_IP) {
+	fixed_peer = {
+		ip: process.env.FORGING_NODE_IP,
+		port: process.env.FORGING_NODE_PORT || 5000
+	}
+}
 const customConfig = {
     label: "concert",
     genesisConfig: {
@@ -42,14 +49,11 @@ const customConfig = {
         seedPeers: [
           ],
         fixedPeers: [
-            {
-				"ip": "159.69.159.240",
-				"port": 5000
-			}
+		fixed_peer
           ]
     },
 };
-lisk_sdk_1.configDevnet.forging.force=false;
+lisk_sdk_1.configDevnet.forging.force=process.env.IS_FORGING_NODE;
 async function main() {
     const appConfig = lisk_sdk_1.utils.objects.mergeDeep({}, lisk_sdk_1.configDevnet, customConfig);
     const app = lisk_sdk_1.Application.defaultApplication(lisk_sdk_1.genesisBlockDevnet, appConfig);
