@@ -23,7 +23,8 @@ lisk_sdk_1.genesisBlockDevnet.header.asset.accounts = lisk_sdk_1.genesisBlockDev
     },
 }));
 const f = {peers: []};
-if (!Boolean(process.env.IS_FORGING_NODE) && process.env.FORGING_NODE_IP) {
+const forging = process.env.IS_FORGING_NODE === "true";
+if (!forging && process.env.FORGING_NODE_IP) {
 	f.peers.push({
 		ip: process.env.FORGING_NODE_IP,
 		port: parseInt(process.env.FORGING_NODE_PORT) || 5000
@@ -51,7 +52,7 @@ const customConfig = {
         fixedPeers: f.peers
     },
 };
-lisk_sdk_1.configDevnet.forging.force=Boolean(process.env.IS_FORGING_NODE);
+lisk_sdk_1.configDevnet.forging.force=forging;
 async function main() {
     const appConfig = lisk_sdk_1.utils.objects.mergeDeep({}, lisk_sdk_1.configDevnet, customConfig);
     const app = lisk_sdk_1.Application.defaultApplication(lisk_sdk_1.genesisBlockDevnet, appConfig);
