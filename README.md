@@ -128,8 +128,11 @@ Per verificare che il programma sia stato eseguito correttamente sarà  possibil
 ```
 pm2 logs concert
 ```
+---
+***
+___ 
 
-## **Installare e Configurare Apache**
+# **Installare e Configurare Apache**
 
 ```
 sudo apt-get install apache2 
@@ -174,6 +177,20 @@ Incollare la seguante configurazione di default, sostituendo i campi *<nome_del_
 
 </VirtualHost>
 ```
+
+Abilitare la nuova configurazione:
+```
+sudo a2ensite <nome_del_dominio>.conf 
+```
+Prima di procedere controllare la configurazione con:
+```
+sudo apache2ctl configtest
+```
+Riavviare apache
+```
+sudo systemctl restart apache2
+```
+
 <br>
 
 > In caso si utilizzi let's encrypt per il certificato eseguire:
