@@ -13,7 +13,7 @@
       "CHRONOSTAMP_DB_PATH":"~/.lisk/concert/",
       "CHRONOSTAMP_DB_NAME":"concert_plugin.db",
       "IS_FORGING_NODE":false,
-      "FORGING_NODE_IP": "159.69.159.240",
+      "FORGING_NODE_IP": "127.0.0.1",
       "FORGING_NODE_PORT": 5000
     }
   }
